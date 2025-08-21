@@ -1,1 +1,403 @@
-# kodparksilivri.github.io
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodpark Silivri - Robotik Kodlama Atölyesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .tech-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .robot-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .age-group {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-2">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="logo.png" />
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Kodpark Silivri</h1>
+                        <p class="text-sm opacity-90">Robotik Kodlama Atölyesi</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#hakkimizda" class="hover:text-yellow-300 transition-colors">Hakkımızda</a>
+                    <a href="#teknolojiler" class="hover:text-yellow-300 transition-colors">Teknolojiler</a>
+                    <a href="#yaş-gruplari" class="hover:text-yellow-300 transition-colors">Yaş Grupları</a>
+                    <a href="#iletisim" class="hover:text-yellow-300 transition-colors">İletişim</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="robot-animation inline-block text-8xl mb-6">🤖</div>
+            <h2 class="text-5xl font-bold mb-6">Geleceğin Teknoloji Liderleri</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">5-15 yaş arası çocuklar için eğlenceli ve öğretici robotik kodlama deneyimi</p>
+            <button onclick="scrollToSection('hakkimizda')" class="bg-yellow-400 text-gray-800 px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-300 transition-colors shadow-lg">
+                Keşfetmeye Başla 🚀
+            </button>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Hakkımızda</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                            🎯 Vizyonumuz
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            Çocukların teknoloji ile tanışmasını sağlayarak, yaratıcı düşünme, problem çözme ve analitik düşünce becerilerini geliştirmek. Geleceğin teknoloji liderlerini yetiştirmek.
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-2xl">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                            🚀 Misyonumuz
+                        </h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            Eğlenceli ve interaktif öğrenme yöntemleriyle çocukların robotik ve kodlama dünyasına adım atmalarını sağlamak. STEAM eğitimi ile yaratıcılıklarını desteklemek.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teknolojiler -->
+    <section id="teknolojiler" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Kullandığımız Teknolojiler</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="scratch.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Scratch</h4>
+                    <p class="text-gray-600">Görsel programlama ile kodlamanın temellerini öğrenme</p>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="lego.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Lego Spike</h4>
+                    <p class="text-gray-600">LEGO parçaları ve sensörlerle robot tasarlayarak mühendislik ve kodlama becerilerini geliştirme</p>
+                </div>
+
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="python.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Python</h4>
+                    <p class="text-gray-600">İleri seviye programlama ve yapay zeka uygulamaları</p>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="arduino.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Arduino</h4>
+                    <p class="text-gray-600">Elektronik devreler ve sensör programlama</p>
+                </div>
+                
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="makeymakey.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Makey Makey</h4>
+                    <p class="text-gray-600">Basit devrelerle günlük eşyaları bilgisayara bağlayarak yaratıcılığı ve problem çözmeyi öğrenme</p>
+                </div>
+
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="appinventor.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">MIT App Inventor</h4>
+                    <p class="text-gray-600">Mobil uygulama geliştirme ve tasarım</p>
+                </div>
+
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="3dkalem.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">3D Kalem</h4>
+                    <p class="text-gray-600">Üç boyutlu nesneler çizerek hayal gücünü somut tasarımlara dönüştürme</p>
+                </div>
+
+                <div class="tech-card bg-white p-6 rounded-2xl shadow-lg text-center">
+                    <div class="container px-20 text-4xl mb-4"><img src="microbit.png" /></div>
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Micro:bit</h4>
+                    <p class="text-gray-600">Taşınabilir mikro denetleyici kart ile elektronik ve programlama temellerini öğrenme</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yaş Grupları ve Robotik Setler -->
+    <section id="yaş-gruplari" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Yaş Gruplarına Göre Robotik Setlerimiz</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- 5-7 Yaş -->
+                <div class="age-group text-white p-8 rounded-2xl shadow-xl">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🧸</div>
+                        <h4 class="text-2xl font-bold">5-7 Yaş</h4>
+                        <p class="opacity-90">Keşif ve Oyun</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🔧 LEGO WeDo 2.0</h5>
+                            <p class="text-sm opacity-90">Basit motorlar ve sensörlerle ilk robotik deneyim</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🎨 ScratchJr</h5>
+                            <p class="text-sm opacity-90">Renkli bloklar ile programlama mantığı</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 8-11 Yaş -->
+                <div class="age-group text-white p-8 rounded-2xl shadow-xl">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🔬</div>
+                        <h4 class="text-2xl font-bold">8-11 Yaş</h4>
+                        <p class="opacity-90">Öğrenme ve Yaratma</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🤖 LEGO Mindstorms EV3</h5>
+                            <p class="text-sm opacity-90">Gelişmiş sensörler ve karmaşık robotlar</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🧩 Scratch 3.0</h5>
+                            <p class="text-sm opacity-90">Oyun ve animasyon programlama</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 12-15 Yaş -->
+                <div class="age-group text-white p-8 rounded-2xl shadow-xl">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🚀</div>
+                        <h4 class="text-2xl font-bold">12-15 Yaş</h4>
+                        <p class="opacity-90">İleri Seviye ve İnovasyon</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">⚡ Arduino Uno</h5>
+                            <p class="text-sm opacity-90">Elektronik devreler ve IoT projeleri</p>
+                        </div>
+                        <div class="bg-white bg-opacity-20 p-4 rounded-lg">
+                            <h5 class="font-semibold mb-2">🐍 Python & Raspberry Pi</h5>
+                            <p class="text-sm opacity-90">Yapay zeka ve makine öğrenmesi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Özellikler -->
+    <section class="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Neden Kodpark Silivri?</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl">👨‍🏫</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Uzman Eğitmenler</h4>
+                    <p class="text-gray-600">Deneyimli ve sertifikalı eğitmen kadromuz</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl">🏆</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Proje Tabanlı</h4>
+                    <p class="text-gray-600">Gerçek projelerle öğrenme deneyimi</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Küçük Sınıflar</h4>
+                    <p class="text-gray-600">Maksimum 8 kişilik sınıflarla bireysel ilgi</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl">🎖️</span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">Sertifika</h4>
+                    <p class="text-gray-600">Tamamlanan kurslar için sertifika</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section id="iletisim" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold mb-4">İletişim</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-2xl font-bold mb-6">Bizimle İletişime Geçin</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span>📍</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Adres</p>
+                                <p class="text-gray-300">Yeni Mah. Ahmet Çakar Sok. Silivri, İstanbul</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span>📞</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Telefon</p>
+                                <p class="text-gray-300">0537 257 67 54</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                <span>✉️</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold">E-posta</p>
+                                <p class="text-gray-300">kodparksilivri@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700 p-8 rounded-2xl">
+                    <h4 class="text-xl font-bold mb-4">Bilgi Formu</h4>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Adınız Soyadınız" class="w-full p-3 rounded-lg bg-gray-600 text-white placeholder-gray-300">
+                        <input type="email" placeholder="E-posta Adresiniz" class="w-full p-3 rounded-lg bg-gray-600 text-white placeholder-gray-300">
+                        <input type="tel" placeholder="Telefon Numaranız" class="w-full p-3 rounded-lg bg-gray-600 text-white placeholder-gray-300">
+                        <select class="w-full p-3 rounded-lg bg-gray-600 text-white">
+                            <option>Çocuğunuzun Yaşı</option>
+                            <option>5-7 Yaş</option>
+                            <option>8-11 Yaş</option>
+                            <option>12-15 Yaş</option>
+                        </select>
+                        <textarea placeholder="Mesajınız" rows="4" class="w-full p-3 rounded-lg bg-gray-600 text-white placeholder-gray-300"></textarea>
+                        <button type="button" onclick="showDemoAlert()" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
+                            Bilgi Al 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex items-center justify-center space-x-4 mb-4">
+                <div class="w-16 h-16 flex items-center justify-center">
+                    <img src="logo.png" />
+                </div>
+                <h5 class="text-xl font-bold">Kodpark Silivri</h5>
+            </div>
+            <p class="text-gray-400 mb-4">Geleceğin teknoloji liderlerini yetiştiriyoruz</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">📘 Facebook</a>
+                <a href="https://www.instagram.com/kodparksilivri" class="text-gray-400 hover:text-white transition-colors">📷 Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">🐦 Twitter</a>
+            </div>
+            <p class="text-gray-500 text-sm">© 2025 Kodpark Silivri. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function showDemoAlert() {
+            alert('Kodpark Silivri ile iletişime geçmek için telefon numarasını kullanabilirsiniz!');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9702d0ca3797b3c4',t:'MTc1NTM2NzA2Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
